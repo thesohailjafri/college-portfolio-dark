@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <MyContainerSm marginBottom={10}>
       <Center display={"flex"} gap={5}>
-        <Button variant={"outline"} p={2} borderRadius={"full"} border={0}>
+        <Button variant={"outline"} p={2} color={'white'} _hover={{bg : "gray.900"}} borderRadius={"full"} border={0}>
           <Link
             _focus={{ outline: "none", boxShadow: "none" }}
             href="mailto:thezenlabs.in@gmail.com"
@@ -16,7 +16,7 @@ export default function Footer() {
             <CiMail />
           </Link>
         </Button>
-        <Button variant={"outline"} p={2} borderRadius={"full"} border={0}>
+        <Button variant={"outline"} p={2} color={'white'} _hover={{bg : "gray.900"}} borderRadius={"full"} border={0}>
           <Link
             _focus={{ outline: "none", boxShadow: "none" }}
             href="https://github.com/thesohailjafri"
@@ -24,7 +24,7 @@ export default function Footer() {
             <VscGithubAlt />
           </Link>
         </Button>
-        <Button variant={"outline"} p={2} borderRadius={"full"} border={0}>
+        <Button variant={"outline"} p={2} color={'white'} _hover={{bg : "gray.900"}} borderRadius={"full"} border={0}>
           <Link
             _focus={{ outline: "none", boxShadow: "none" }}
             href="https://x.com/thesohailjafri"
@@ -32,7 +32,7 @@ export default function Footer() {
             <RiTwitterXLine />
           </Link>
         </Button>
-        <Button variant={"outline"} p={2} borderRadius={"full"} border={0}>
+        <Button variant={"outline"} p={2} color={'white'} _hover={{bg : "gray.900"}} borderRadius={"full"} border={0}>
           <Link
             _focus={{ outline: "none", boxShadow: "none" }}
             href="https://www.linkedin.com/in/thesohailjafri/"

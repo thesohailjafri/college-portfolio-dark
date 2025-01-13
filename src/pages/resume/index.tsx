@@ -18,7 +18,7 @@ export default function index() {
           <Heading as="h1" fontSize="3xl" fontWeight="bold" mb={4}>
             My Resume📝
           </Heading>
-          <Button p={2} variant={"outline"}>
+          <Button p={2} variant={"outline"} color={'white'} _hover={{bg : "gray.900"}} borderColor={"gray.700"}>
             <Link
               href="https://thesohailjafri.vercel.app/Sohail_Jafri_Resume.pdf"
               target="_blank"
