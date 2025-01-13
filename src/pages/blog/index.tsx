@@ -14,6 +14,7 @@ export default function index() {
           _focus={{ outline: "none", boxShadow: "none" }}
           href="https://dev.to/thesohailjafri/the-must-have-seo-checklist-for-developers-192i"
           _hover={{ textDecoration: "none" }}
+          target="_blank"
         >
           <Stack gap={4} alignItems="start">
             <Heading as="h3" fontSize="xl" fontWeight="bold" textAlign="start">
@@ -33,6 +34,7 @@ export default function index() {
           _focus={{ outline: "none", boxShadow: "none" }}
           href="https://dev.to/thesohailjafri/why-beginners-crush-it-with-typescript-hon"
           _hover={{ textDecoration: "none" }}
+          target="_blank"
         >
           <Stack gap={4} alignItems="start">
             <Heading as="h3" fontSize="xl" fontWeight="bold" textAlign="start">
@@ -50,6 +52,7 @@ export default function index() {
           _focus={{ outline: "none", boxShadow: "none" }}
           href="https://dev.to/thesohailjafri/how-to-choose-the-right-ui-library-for-your-next-big-project-51ok"
           _hover={{ textDecoration: "none" }}
+          target="_blank"
         >
           <Stack gap={4} alignItems="start">
             <Heading as="h3" fontSize="xl" fontWeight="bold" textAlign="start">
@@ -67,6 +70,7 @@ export default function index() {
           _focus={{ outline: "none", boxShadow: "none" }}
           href="https://dev.to/thesohailjafri/brutal-truths-about-freelancing-bhg"
           _hover={{ textDecoration: "none" }}
+          target="_blank"
         >
           <Stack gap={4} alignItems="start">
             <Heading as="h3" fontSize="xl" fontWeight="bold" textAlign="start">
@@ -84,6 +88,7 @@ export default function index() {
           _focus={{ outline: "none", boxShadow: "none" }}
           href="https://dev.to/thesohailjafri/dont-make-this-mistake-choosing-the-wrong-database-could-cost-you-30gi"
           _hover={{ textDecoration: "none" }}
+          target="_blank"
         >
           <Stack gap={4} alignItems="start">
             <Heading as="h3" fontSize="xl" fontWeight="bold" textAlign="start">

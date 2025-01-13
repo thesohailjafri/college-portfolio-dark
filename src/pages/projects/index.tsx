@@ -11,9 +11,10 @@ export default function index() {
         </Heading>
         <Link
           as="a"
-          _focus={{ outline: "none", boxShadow: "none" }} 
+          _focus={{ outline: "none", boxShadow: "none" }}
           href="https://withsam.in/"
           _hover={{ textDecoration: "none" }}
+          target="_blank"
         >
           <Stack gap={4} alignItems="start">
             <Heading as="h3" fontSize="xl" fontWeight="bold" textAlign="start">
@@ -30,156 +31,162 @@ export default function index() {
         <hr color="gray.100" />
         <Link
           as="a"
-          _focus={{ outline: "none", boxShadow: "none" }} 
+          _focus={{ outline: "none", boxShadow: "none" }}
           href="https://asahiramen.in/"
           _hover={{ textDecoration: "none" }}
+          target="_blank"
         >
           <Stack gap={4} alignItems="start">
             <Heading as="h3" fontSize="xl" fontWeight="bold" textAlign="start">
-            Asahi Ramen
+              Asahi Ramen
             </Heading>
             <Text color="gray.400" lineHeight={1.5}>
-            A website for the best Ramen House in Mumbai and there is as good as
-            there ramen. If we say so ourselves.
+              A website for the best Ramen House in Mumbai and there is as good
+              as there ramen. If we say so ourselves.
             </Text>
           </Stack>
         </Link>
-       
-        <hr color="gray.100" />
 
+        <hr color="gray.100" />
 
         <Link
           as="a"
-          _focus={{ outline: "none", boxShadow: "none" }} 
+          _focus={{ outline: "none", boxShadow: "none" }}
           href="https://chakraframer.com/"
           _hover={{ textDecoration: "none" }}
+          target="_blank"
         >
           <Stack gap={4} alignItems="start">
             <Heading as="h3" fontSize="xl" fontWeight="bold" textAlign="start">
-            Chakra Framer
+              Chakra Framer
             </Heading>
             <Text color="gray.400" lineHeight={1.5}>
-            UI lib that provides free ready to use chakra UI and Framer Motion
-            components for your next project.
+              UI lib that provides free ready to use chakra UI and Framer Motion
+              components for your next project.
             </Text>
           </Stack>
         </Link>
 
-
-
-        
         <hr color="gray.100" />
-    
+
         <Link
           as="a"
-          _focus={{ outline: "none", boxShadow: "none" }} 
+          _focus={{ outline: "none", boxShadow: "none" }}
           href="https://mymusicpiechart.com/"
           _hover={{ textDecoration: "none" }}
+          target="_blank"
         >
           <Stack gap={4} alignItems="start">
             <Heading as="h3" fontSize="xl" fontWeight="bold" textAlign="start">
-            My Music Pie Chart
+              My Music Pie Chart
             </Heading>
             <Text color="gray.400" lineHeight={1.5}>
-            A fun project that visualizes my music taste in a pie chart.
+              A fun project that visualizes my music taste in a pie chart.
             </Text>
           </Stack>
         </Link>
-       
+
         <hr color="gray.100" />
 
         <Link
           as="a"
-          _focus={{ outline: "none", boxShadow: "none" }} 
+          _focus={{ outline: "none", boxShadow: "none" }}
           href="https://gpacalculate.com/"
           _hover={{ textDecoration: "none" }}
+          target="_blank"
         >
           <Stack gap={4} alignItems="start">
             <Heading as="h3" fontSize="xl" fontWeight="bold" textAlign="start">
-            GPA Calculate
+              GPA Calculate
             </Heading>
             <Text color="gray.400" lineHeight={1.5}>
-            A GPA Calculator that is for students seeking accurate and fast GPA
-            calculations. This is a pSEO implementation experiment.
+              A GPA Calculator that is for students seeking accurate and fast
+              GPA calculations. This is a pSEO implementation experiment.
             </Text>
           </Stack>
         </Link>
 
-
         <hr color="gray.100" />
         <Link
           as="a"
-          _focus={{ outline: "none", boxShadow: "none" }} 
+          _focus={{ outline: "none", boxShadow: "none" }}
           href="https://santytutorials.com/"
           _hover={{ textDecoration: "none" }}
+          target="_blank"
         >
           <Stack gap={4} alignItems="start">
             <Heading as="h3" fontSize="xl" fontWeight="bold" textAlign="start">
-            Santy Tutorials
+              Santy Tutorials
             </Heading>
             <Text color="gray.400" lineHeight={1.5}>
-            Santy tutorials were facing a problem with their website. As it looked out of space and outdated. We gave it a fresh look and feel with new branding and super fast and awesome website.
+              Santy tutorials were facing a problem with their website. As it
+              looked out of space and outdated. We gave it a fresh look and feel
+              with new branding and super fast and awesome website.
             </Text>
           </Stack>
         </Link>
 
-
         <hr color="gray.100" />
         <Link
           as="a"
-          _focus={{ outline: "none", boxShadow: "none" }} 
+          _focus={{ outline: "none", boxShadow: "none" }}
           href="https://highriserealty.in/"
           _hover={{ textDecoration: "none" }}
+          target="_blank"
         >
           <Stack gap={4} alignItems="start">
             <Heading as="h3" fontSize="xl" fontWeight="bold" textAlign="start">
-            High Rise Realty
+              High Rise Realty
             </Heading>
             <Text color="gray.400" lineHeight={1.5}>
-            High Rise Realty has been a trusted name in the real industry for over 15 years in mumbai so we gave them a website that reflects their legacy.
+              High Rise Realty has been a trusted name in the real industry for
+              over 15 years in mumbai so we gave them a website that reflects
+              their legacy.
             </Text>
           </Stack>
         </Link>
 
-
         <hr color="gray.100" />
         <Link
           as="a"
-          _focus={{ outline: "none", boxShadow: "none" }} 
+          _focus={{ outline: "none", boxShadow: "none" }}
           href="https://webenetic.com/"
           _hover={{ textDecoration: "none" }}
+          target="_blank"
         >
           <Stack gap={4} alignItems="start">
             <Heading as="h3" fontSize="xl" fontWeight="bold" textAlign="start">
-            Webenetic Pvt. Ltd.
+              Webenetic Pvt. Ltd.
             </Heading>
             <Text color="gray.400" lineHeight={1.5}>
-           Webenetic is a digital marketing company that help businesses grow their sales and revenue. We gave them a website that reflects their expertise and services.
+              Webenetic is a digital marketing company that help businesses grow
+              their sales and revenue. We gave them a website that reflects
+              their expertise and services.
             </Text>
           </Stack>
         </Link>
-
 
         <hr color="gray.100" />
         <Link
           as="a"
-          _focus={{ outline: "none", boxShadow: "none" }} 
+          _focus={{ outline: "none", boxShadow: "none" }}
           href="https://www.tencodlife.com/"
           _hover={{ textDecoration: "none" }}
+          target="_blank"
         >
           <Stack gap={4} alignItems="start">
             <Heading as="h3" fontSize="xl" fontWeight="bold" textAlign="start">
-            Tencode Life Sciences
+              Tencode Life Sciences
             </Heading>
             <Text color="gray.400" lineHeight={1.5}>
-           Tencode is pharmaceutical company that is an a mission to make healthcare affordable and accessible to all. We gave them a website that reflects their wide range of products and services.
+              Tencode is pharmaceutical company that is an a mission to make
+              healthcare affordable and accessible to all. We gave them a
+              website that reflects their wide range of products and services.
             </Text>
           </Stack>
         </Link>
 
         <hr color="gray.100" />
-
-       
       </Stack>
     </MyContainerSm>
   );
