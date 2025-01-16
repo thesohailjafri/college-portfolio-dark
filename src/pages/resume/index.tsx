@@ -1,38 +1,37 @@
 // import { Button } from '@/components/ui/button'
-import { MyContainerSm } from "@/components/ui/continers";
-import {
-  Box,
-  Button,
-  Flex,
-  Heading,
-  Link,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
+import { CNLink } from '@/components/chakra-next'
+import { MyContainerSm } from '@/components/ui/continers'
+import { Box, Button, Flex, Heading, Stack, Text } from '@chakra-ui/react'
 
 export default function index() {
   return (
     <MyContainerSm marginBottom={10}>
       <Stack gap={8}>
-        <Flex justifyContent={"space-between"}>
+        <Flex justifyContent={'space-between'}>
           <Heading as="h1" fontSize="3xl" fontWeight="bold" mb={4}>
             My Resume📝
           </Heading>
-          <Button p={2} variant={"outline"} color={'white'} _hover={{bg : "gray.900"}} borderColor={"gray.700"}>
-            <Link
+          <Button
+            p={2}
+            variant={'outline'}
+            color={'white'}
+            _hover={{ bg: 'gray.900' }}
+            borderColor={'gray.700'}
+          >
+            <CNLink
               href="https://thesohailjafri.vercel.app/Sohail_Jafri_Resume.pdf"
               target="_blank"
-              _focus={{ outline: "none", boxShadow: "none" }}
+              _focus={{ outline: 'none', boxShadow: 'none' }}
             >
               Download Resume
-            </Link>
+            </CNLink>
           </Button>
         </Flex>
         <Heading as="h2" fontSize="2xl" fontWeight="bold" textAlign="start">
           Work Experience
         </Heading>
         <Stack gap={2}>
-          <Flex justifyContent={"space-between"} alignItems={"center"}>
+          <Flex justifyContent={'space-between'} alignItems={'center'}>
             <Heading
               as="h3"
               fontSize="xl"
@@ -41,12 +40,12 @@ export default function index() {
             >
               APPVENT LLP | Full Stack Software Developer
             </Heading>
-            <Text color="gray.600" fontSize={"sm"}>
+            <Text color="gray.600" fontSize={'sm'}>
               Apr 2020 - Oct 2021 | Mumbai, MH, IN
             </Text>
           </Flex>
 
-          <Box as="ul" listStyleType={"disc"} ml={5} color={"gray.400"}>
+          <Box as="ul" listStyleType={'disc'} ml={5} color={'gray.400'}>
             <li>
               Developed an ERP system using GraphQL, Next.js, Node.js, and
               MongoDB for seamless manufacturing to distribution management.
@@ -76,7 +75,7 @@ export default function index() {
           <Heading as="h2" fontSize="2xl" fontWeight="bold" textAlign="start">
             Education
           </Heading>
-          <Flex justifyContent={"space-between"} alignItems={"center"}>
+          <Flex justifyContent={'space-between'} alignItems={'center'}>
             <Heading
               as="h3"
               fontSize="xl"
@@ -85,7 +84,7 @@ export default function index() {
             >
               BACHELOR OF ENGINEERING (IT) | CGPA: 3.2/4
             </Heading>
-            <Text color="gray.600" fontSize={"sm"}>
+            <Text color="gray.600" fontSize={'sm'}>
               Dec 2020 - May 2023 | Mumbai, MH, IN
             </Text>
           </Flex>
@@ -95,7 +94,7 @@ export default function index() {
           <Heading as="h2" fontSize="2xl" fontWeight="bold" textAlign="start">
             Awards
           </Heading>
-          <Box as="ul" listStyleType={"disc"} ml={5} color={"gray.400"}>
+          <Box as="ul" listStyleType={'disc'} ml={5} color={'gray.400'}>
             <li>AWS Cloud Practitioner.</li>
             <li>Open Source Contribution.</li>
             <li>SQL (Advanced).</li>
@@ -104,5 +103,5 @@ export default function index() {
         </Stack>
       </Stack>
     </MyContainerSm>
-  );
+  )
 }

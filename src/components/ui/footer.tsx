@@ -1,46 +1,57 @@
-import { Button, Center, Link } from "@chakra-ui/react";
-import { CiMail } from "react-icons/ci";
-import { RiLinkedinBoxLine, RiTwitterXLine } from "react-icons/ri";
-import { VscGithubAlt } from "react-icons/vsc";
-import { MyContainerSm } from "./continers";
+import { Button, Center, Link } from '@chakra-ui/react'
+import { IconType } from 'react-icons'
+import { FaGithub, FaLinkedin, FaXTwitter } from 'react-icons/fa6'
+import { LuMailPlus } from 'react-icons/lu'
+import { MyContainerSm } from './continers'
+import { CNLink } from '../chakra-next'
 
 export default function Footer() {
+  const items: {
+    Icon: IconType
+    href: string
+    title: string
+  }[] = [
+    {
+      Icon: LuMailPlus,
+      href: 'mailto:#',
+      title: 'Email',
+    },
+    {
+      Icon: FaGithub,
+      href: 'https://github.com/thesohailjafri',
+      title: 'Github',
+    },
+    {
+      Icon: FaXTwitter,
+      href: 'https://x.com/thesohailjafri',
+      title: 'Twitter',
+    },
+    {
+      Icon: FaLinkedin,
+      href: 'https://www.linkedin.com/in/thesohailjafri/',
+      title: 'LinkedIn',
+    },
+  ]
+
   return (
     <MyContainerSm marginBottom={10}>
-      <Center display={"flex"} gap={5}>
-        <Button variant={"outline"} p={2} color={'white'} _hover={{bg : "gray.900"}} borderRadius={"full"} border={0}>
-          <Link
-            _focus={{ outline: "none", boxShadow: "none" }}
-            href="mailto:thezenlabs.in@gmail.com"
+      <Center display={'flex'} gap={5}>
+        {items.map((item) => (
+          <Button
+            key={item.title}
+            variant={'outline'}
+            p={2}
+            color={'white'}
+            _hover={{ bg: 'gray.900' }}
+            borderRadius={'full'}
+            border={0}
           >
-            <CiMail />
-          </Link>
-        </Button>
-        <Button variant={"outline"} p={2} color={'white'} _hover={{bg : "gray.900"}} borderRadius={"full"} border={0}>
-          <Link
-            _focus={{ outline: "none", boxShadow: "none" }}
-            href="https://github.com/thesohailjafri"
-          >
-            <VscGithubAlt />
-          </Link>
-        </Button>
-        <Button variant={"outline"} p={2} color={'white'} _hover={{bg : "gray.900"}} borderRadius={"full"} border={0}>
-          <Link
-            _focus={{ outline: "none", boxShadow: "none" }}
-            href="https://x.com/thesohailjafri"
-          >
-            <RiTwitterXLine />
-          </Link>
-        </Button>
-        <Button variant={"outline"} p={2} color={'white'} _hover={{bg : "gray.900"}} borderRadius={"full"} border={0}>
-          <Link
-            _focus={{ outline: "none", boxShadow: "none" }}
-            href="https://www.linkedin.com/in/thesohailjafri/"
-          >
-            <RiLinkedinBoxLine />
-          </Link>
-        </Button>
+            <CNLink href={item.href}>
+              <item.Icon />
+            </CNLink>
+          </Button>
+        ))}
       </Center>
     </MyContainerSm>
-  );
+  )
 }
