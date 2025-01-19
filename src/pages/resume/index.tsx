@@ -40,7 +40,7 @@ export default function index() {
             </Text>
           </Flex>
 
-          <Box as="ul" listStyleType={"disc"} ml={5} color={"gray.400"}>
+          <Box as="ul" listStyleType={"disc"} ml={5} color={"gray.500"}>
             <li>
               Developed an ERP system using GraphQL, Next.js, Node.js, and
               MongoDB for seamless manufacturing to distribution management.
@@ -89,7 +89,7 @@ export default function index() {
           <Heading as="h2" fontSize="2xl" fontWeight="bold" textAlign="start">
             Awards
           </Heading>
-          <Box as="ul" listStyleType={"disc"} ml={5} color={"gray.400"}>
+          <Box as="ul" listStyleType={"disc"} ml={5} color={"gray.500"}>
             <li>AWS Cloud Practitioner.</li>
             <li>Open Source Contribution.</li>
             <li>SQL (Advanced).</li>
