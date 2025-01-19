@@ -32,14 +32,9 @@ export default function index() {
         </Heading>
         <Stack gap={2}>
           <Flex justifyContent={'space-between'} alignItems={'center'}>
-            <Heading
-              as="h3"
-              fontSize="xl"
-              fontWeight="medium"
-              textAlign="start"
-            >
+            <Text fontSize="xl" fontWeight="medium" textAlign="start">
               APPVENT LLP | Full Stack Software Developer
-            </Heading>
+            </Text>
             <Text color="gray.600" fontSize={'sm'}>
               Apr 2020 - Oct 2021 | Mumbai, MH, IN
             </Text>
