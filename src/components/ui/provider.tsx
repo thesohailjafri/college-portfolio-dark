@@ -32,9 +32,11 @@ export const system = createSystem(defaultConfig, {
       scrollBehavior: 'smooth',
       bg: 'gray.950',
       color: 'white',
+      overflowY: 'scroll',
     },
     '::-webkit-scrollbar': {
       width: '10px',
+      zIndex : "1"
     },
 
     /* Track */
@@ -66,7 +68,7 @@ export const system = createSystem(defaultConfig, {
 export function Provider(props: { children: ReactNode }) {
   return (
     <ChakraProvider value={system}>
-      <Box>{props.children}</Box>
+      <Box >{props.children}</Box>
     </ChakraProvider>
   )
 }

@@ -1,18 +1,18 @@
-import { CNLink } from '@/components/chakra-next'
-import { MyContainerSm } from '@/components/ui/continers'
-import { Heading, Stack, Text } from '@chakra-ui/react'
-import React from 'react'
+import { CNLink } from "@/components/chakra-next";
+import { MyContainer } from "@/components/ui/continers";
+import { Heading, Stack, Text } from "@chakra-ui/react";
+import React from "react";
 
 export default function index() {
   return (
-    <MyContainerSm marginBottom={10}>
+    <MyContainer marginBottom={10}>
       <Stack gap={8}>
         <Heading as="h1" fontSize="3xl" fontWeight="bold" mb={4}>
           Projects
         </Heading>
         <CNLink
           href="https://withsam.in/"
-          _hover={{ textDecoration: 'none' }}
+          _hover={{ textDecoration: "none" }}
           target="_blank"
         >
           <Stack gap={4} alignItems="start">
@@ -30,7 +30,7 @@ export default function index() {
         <hr color="gray.100" />
         <CNLink
           href="https://asahiramen.in/"
-          _hover={{ textDecoration: 'none' }}
+          _hover={{ textDecoration: "none" }}
           target="_blank"
         >
           <Stack gap={4} alignItems="start">
@@ -48,7 +48,7 @@ export default function index() {
 
         <CNLink
           href="https://chakraframer.com/"
-          _hover={{ textDecoration: 'none' }}
+          _hover={{ textDecoration: "none" }}
           target="_blank"
         >
           <Stack gap={4} alignItems="start">
@@ -66,7 +66,7 @@ export default function index() {
 
         <CNLink
           href="https://mymusicpiechart.com/"
-          _hover={{ textDecoration: 'none' }}
+          _hover={{ textDecoration: "none" }}
           target="_blank"
         >
           <Stack gap={4} alignItems="start">
@@ -83,7 +83,7 @@ export default function index() {
 
         <CNLink
           href="https://gpacalculate.com/"
-          _hover={{ textDecoration: 'none' }}
+          _hover={{ textDecoration: "none" }}
           target="_blank"
         >
           <Stack gap={4} alignItems="start">
@@ -100,7 +100,7 @@ export default function index() {
         <hr color="gray.100" />
         <CNLink
           href="https://santytutorials.com/"
-          _hover={{ textDecoration: 'none' }}
+          _hover={{ textDecoration: "none" }}
           target="_blank"
         >
           <Stack gap={4} alignItems="start">
@@ -118,7 +118,7 @@ export default function index() {
         <hr color="gray.100" />
         <CNLink
           href="https://highriserealty.in/"
-          _hover={{ textDecoration: 'none' }}
+          _hover={{ textDecoration: "none" }}
           target="_blank"
         >
           <Stack gap={4} alignItems="start">
@@ -136,7 +136,7 @@ export default function index() {
         <hr color="gray.100" />
         <CNLink
           href="https://webenetic.com/"
-          _hover={{ textDecoration: 'none' }}
+          _hover={{ textDecoration: "none" }}
           target="_blank"
         >
           <Stack gap={4} alignItems="start">
@@ -154,7 +154,7 @@ export default function index() {
         <hr color="gray.100" />
         <CNLink
           href="https://www.tencodlife.com/"
-          _hover={{ textDecoration: 'none' }}
+          _hover={{ textDecoration: "none" }}
           target="_blank"
         >
           <Stack gap={4} alignItems="start">
@@ -171,6 +171,6 @@ export default function index() {
 
         <hr color="gray.100" />
       </Stack>
-    </MyContainerSm>
-  )
+    </MyContainer>
+  );
 }
