@@ -1,43 +1,53 @@
 import { CNLink } from '@/components/chakra-next'
+import Metahead from '@/components/metahead'
+import { siteMap } from '@/lib/config/default.config'
 import { Flex, Heading, HStack, Separator, Stack, Text } from '@chakra-ui/react'
 import { FaGithub, FaLink } from 'react-icons/fa6'
 
 export default function index() {
   return (
-    <Stack gap={8}>
-      <Heading as="h1" fontSize="3xl" fontWeight="bold" mb={4}>
-        Projects🚀
-      </Heading>
-      {projectData.map((project, index) => {
-        return (
-          <Stack gap={4} alignItems="start" key={index}>
-            <Flex flexWrap={'wrap'} gapX={4} gapY={2}>
-              <Text textStyle={'cardHeading'} color={'white'}>
-                {project.title}
-              </Text>
-              <HStack gap={4}>
-                <CNLink
-                  hidden={!project.previewUrl}
-                  href={project.previewUrl!}
-                  color={'white'}
-                >
-                  <FaLink size={'1.2rem'} />
-                </CNLink>
-                <CNLink
-                  hidden={!project.gitUrl}
-                  href={project.gitUrl!}
-                  color={'white'}
-                >
-                  <FaGithub size={'1.2rem'} />
-                </CNLink>
-              </HStack>
-            </Flex>
-            <Separator opacity={0.2} />
-            <Text lineHeight={1.5}>{project.description}</Text>
-          </Stack>
-        )
-      })}
-    </Stack>
+    <>
+      <Metahead
+        title="Projects | College Portfolio"
+        description="This is a portfolio website built using Next.js and Chakra UI by ChakraFramer Team for college students to showcase their resume, projects, and contact information."
+        keywords={['Portfolio', 'Resume', 'ChakraFramer']}
+        url={siteMap.projects}
+      />
+      <Stack gap={8}>
+        <Heading as="h1" fontSize="3xl" fontWeight="bold" mb={4}>
+          Projects🚀
+        </Heading>
+        {projectData.map((project, index) => {
+          return (
+            <Stack gap={4} alignItems="start" key={index}>
+              <Flex flexWrap={'wrap'} gapX={4} gapY={2}>
+                <Text textStyle={'cardHeading'} color={'white'}>
+                  {project.title}
+                </Text>
+                <HStack gap={4}>
+                  <CNLink
+                    hidden={!project.previewUrl}
+                    href={project.previewUrl!}
+                    color={'white'}
+                  >
+                    <FaLink size={'1.2rem'} />
+                  </CNLink>
+                  <CNLink
+                    hidden={!project.gitUrl}
+                    href={project.gitUrl!}
+                    color={'white'}
+                  >
+                    <FaGithub size={'1.2rem'} />
+                  </CNLink>
+                </HStack>
+              </Flex>
+              <Separator opacity={0.2} />
+              <Text lineHeight={1.5}>{project.description}</Text>
+            </Stack>
+          )
+        })}
+      </Stack>
+    </>
   )
 }
 

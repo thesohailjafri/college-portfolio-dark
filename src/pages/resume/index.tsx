@@ -1,5 +1,7 @@
 // import { Button } from '@/components/ui/button'
 import { CNLink } from '@/components/chakra-next'
+import Metahead from '@/components/metahead'
+import { siteMap } from '@/lib/config/default.config'
 import {
   Box,
   Button,
@@ -10,96 +12,104 @@ import {
   Text,
 } from '@chakra-ui/react'
 
-export default function index() {
+export default function Resume() {
   return (
-    <Stack gap={12}>
-      <Flex justifyContent={'space-between'}>
-        <Heading as="h1" fontSize="3xl" fontWeight="bold" mb={4}>
-          My Resume📝
-        </Heading>
-        <Button
-          p={2}
-          variant={'outline'}
-          color={'white'}
-          _hover={{ bg: 'gray.900' }}
-          borderColor={'gray.700'}
-        >
-          <CNLink
-            href="/sohailjafri_resume.pdf"
-            target="_blank"
+    <>
+      <Metahead
+        title="Resume | College Portfolio"
+        description="This is a portfolio website built using Next.js and Chakra UI by ChakraFramer Team for college students to showcase their resume, projects, and contact information."
+        keywords={['Portfolio', 'Resume', 'ChakraFramer']}
+        url={siteMap.resume}
+      />
+      <Stack gap={12}>
+        <Flex justifyContent={'space-between'}>
+          <Heading as="h1" fontSize="3xl" fontWeight="bold" mb={4}>
+            My Resume📝
+          </Heading>
+          <Button
+            p={2}
+            variant={'outline'}
             color={'white'}
-            _focus={{ outline: 'none', boxShadow: 'none' }}
+            _hover={{ bg: 'gray.900' }}
+            borderColor={'gray.700'}
           >
-            Download Resume
-          </CNLink>
-        </Button>
-      </Flex>
-      <Stack gap={8}>
-        <Heading as="h2" fontSize="2xl">
-          Work Experience
-        </Heading>
-        {experienceData.map((experience, index) => (
-          <Stack key={index} gap={4}>
-            <Flex justifyContent={'space-between'} alignItems={'center'}>
-              <Text textStyle={'cardHeading'} color={'white'}>
-                {experience.company} | {experience.title}
-              </Text>
-              <Text fontSize={'sm'}>
-                {experience.fromDate} - {experience.toDate}
-              </Text>
-            </Flex>
-            <Separator opacity={0.2} />
-            <Stack as="ul" listStyleType={'disc'} ml={5}>
-              {experience.deliverables.map((deliverable, index) => (
-                <Box as="li" key={index}>
-                  {deliverable}
-                </Box>
-              ))}
-            </Stack>
-          </Stack>
-        ))}
-      </Stack>
-      <Stack gap={8}>
-        <Heading as="h2" fontSize="2xl">
-          Education
-        </Heading>
-        {educationData.map((education, index) => (
-          <Stack key={index} gap={4}>
-            <Flex justifyContent={'space-between'} alignItems={'center'}>
-              <Text textStyle={'cardHeading'} color={'white'}>
-                {education.degree}
-              </Text>
-              <Text fontSize={'sm'}>
-                {education.fromDate} - {education.toDate}
-              </Text>
-            </Flex>
-            <Separator opacity={0.2} />
-            <Stack as="ul" listStyleType={'disc'} ml={5} gap={2}>
-              <Box as={'li'}>CGPA: {education.cgpa}</Box>
-              <Box as={'li'}>{education.location}</Box>
-            </Stack>
-          </Stack>
-        ))}
-      </Stack>
-      <Stack gap={8}>
-        <Heading as="h2" fontSize="2xl">
-          Awards & Certifications
-        </Heading>
-        <Stack gap={4} separator={<Separator opacity={0.2} />}>
-          {awardData.map((award, index) => (
-            <Stack key={index} gap={2}>
-              <Text textStyle={'cardHeading'} color={'white'}>
-                {award.title}
-              </Text>
-              <Text fontSize={'sm'}>
-                {award.date} |{' '}
-                <CNLink href={award.url}>View Certificate</CNLink>
-              </Text>
+            <CNLink
+              href="/sohailjafri_resume.pdf"
+              target="_blank"
+              color={'white'}
+              _focus={{ outline: 'none', boxShadow: 'none' }}
+            >
+              Download Resume
+            </CNLink>
+          </Button>
+        </Flex>
+        <Stack gap={8}>
+          <Heading as="h2" fontSize="2xl">
+            Work Experience
+          </Heading>
+          {experienceData.map((experience, index) => (
+            <Stack key={index} gap={4}>
+              <Flex justifyContent={'space-between'} alignItems={'center'}>
+                <Text textStyle={'cardHeading'} color={'white'}>
+                  {experience.company} | {experience.title}
+                </Text>
+                <Text fontSize={'sm'}>
+                  {experience.fromDate} - {experience.toDate}
+                </Text>
+              </Flex>
+              <Separator opacity={0.2} />
+              <Stack as="ul" listStyleType={'disc'} ml={5}>
+                {experience.deliverables.map((deliverable, index) => (
+                  <Box as="li" key={index}>
+                    {deliverable}
+                  </Box>
+                ))}
+              </Stack>
             </Stack>
           ))}
         </Stack>
+        <Stack gap={8}>
+          <Heading as="h2" fontSize="2xl">
+            Education
+          </Heading>
+          {educationData.map((education, index) => (
+            <Stack key={index} gap={4}>
+              <Flex justifyContent={'space-between'} alignItems={'center'}>
+                <Text textStyle={'cardHeading'} color={'white'}>
+                  {education.degree}
+                </Text>
+                <Text fontSize={'sm'}>
+                  {education.fromDate} - {education.toDate}
+                </Text>
+              </Flex>
+              <Separator opacity={0.2} />
+              <Stack as="ul" listStyleType={'disc'} ml={5} gap={2}>
+                <Box as={'li'}>CGPA: {education.cgpa}</Box>
+                <Box as={'li'}>{education.location}</Box>
+              </Stack>
+            </Stack>
+          ))}
+        </Stack>
+        <Stack gap={8}>
+          <Heading as="h2" fontSize="2xl">
+            Awards & Certifications
+          </Heading>
+          <Stack gap={4} separator={<Separator opacity={0.2} />}>
+            {awardData.map((award, index) => (
+              <Stack key={index} gap={2}>
+                <Text textStyle={'cardHeading'} color={'white'}>
+                  {award.title}
+                </Text>
+                <Text fontSize={'sm'}>
+                  {award.date} |{' '}
+                  <CNLink href={award.url}>View Certificate</CNLink>
+                </Text>
+              </Stack>
+            ))}
+          </Stack>
+        </Stack>
       </Stack>
-    </Stack>
+    </>
   )
 }
 

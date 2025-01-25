@@ -1,34 +1,44 @@
 import { CNLink } from '@/components/chakra-next'
+import Metahead from '@/components/metahead'
+import { siteMap } from '@/lib/config/default.config'
 import { Heading, Separator, Stack, Text } from '@chakra-ui/react'
 
 export default function index() {
   return (
-    <Stack gap={8}>
-      <Heading as="h1" fontSize="3xl" fontWeight="bold" mb={4}>
-        Writing✍️
-      </Heading>
-      {blogData.map((blog, index) => {
-        return (
-          <CNLink
-            key={index}
-            href={blog.href}
-            _hover={{ textDecoration: 'none' }}
-            target="_blank"
-          >
-            <Stack gap={4}>
-              <Text textStyle={'cardHeading'} color={'white'}>
-                {blog.title}
-              </Text>
-              <Separator opacity={0.2} />
-              <Text lineHeight={1.5}>{blog.description}</Text>
-              <Text fontSize={'sm'}>
-                {blog.date} - {blog.readTime}
-              </Text>
-            </Stack>
-          </CNLink>
-        )
-      })}
-    </Stack>
+    <>
+      <Metahead
+        title="Blog | College Portfolio"
+        description="This is a portfolio website built using Next.js and Chakra UI by ChakraFramer Team for college students to showcase their resume, projects, and contact information."
+        keywords={['Portfolio', 'Resume', 'ChakraFramer']}
+        url={siteMap.blog}
+      />
+      <Stack gap={8}>
+        <Heading as="h1" fontSize="3xl" fontWeight="bold" mb={4}>
+          Writing✍️
+        </Heading>
+        {blogData.map((blog, index) => {
+          return (
+            <CNLink
+              key={index}
+              href={blog.href}
+              _hover={{ textDecoration: 'none' }}
+              target="_blank"
+            >
+              <Stack gap={4}>
+                <Text textStyle={'cardHeading'} color={'white'}>
+                  {blog.title}
+                </Text>
+                <Separator opacity={0.2} />
+                <Text lineHeight={1.5}>{blog.description}</Text>
+                <Text fontSize={'sm'}>
+                  {blog.date} - {blog.readTime}
+                </Text>
+              </Stack>
+            </CNLink>
+          )
+        })}
+      </Stack>
+    </>
   )
 }
 
