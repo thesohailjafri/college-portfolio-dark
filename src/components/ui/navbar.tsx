@@ -28,19 +28,19 @@ const items = [
     path: siteMap.home,
   },
   {
-    title: 'Projects',
-    path: siteMap.projects,
-  },
-  {
     title: 'Resume',
     path: siteMap.resume,
   },
   {
-    title: 'Contact',
-    path: siteMap.contact,
-  },
-  {
     title: 'Blog',
     path: siteMap.blog,
+  },
+  {
+    title: 'Projects',
+    path: siteMap.projects,
+  },
+  {
+    title: 'Contact',
+    path: siteMap.contact,
   },
 ]
