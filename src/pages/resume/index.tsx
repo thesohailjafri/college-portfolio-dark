@@ -93,9 +93,7 @@ export default function index() {
               </Text>
               <Text fontSize={'sm'}>
                 {award.date} |{' '}
-                <CNLink href={award.url} color={'blue.400'}>
-                  View Certificate
-                </CNLink>
+                <CNLink href={award.url}>View Certificate</CNLink>
               </Text>
             </Stack>
           ))}

@@ -1,5 +1,5 @@
 import { CNLink } from '@/components/chakra-next'
-import { Heading, Stack, Text } from '@chakra-ui/react'
+import { Heading, Separator, Stack, Text } from '@chakra-ui/react'
 import { CiMail } from 'react-icons/ci'
 import { SlCalender } from 'react-icons/sl'
 
@@ -10,9 +10,7 @@ export default function index() {
         Contact📞
       </Heading>
       <Stack gap={2}>
-        <Text color="gray.400" lineHeight={1.5}>
-          Feel free to reach out to me via email:{' '}
-        </Text>
+        <Text lineHeight={1.5}>Feel free to reach out to me via email: </Text>
         <CNLink
           width={'fit-content'}
           _focus={{ outline: 'none', boxShadow: 'none' }}
@@ -24,7 +22,7 @@ export default function index() {
           placeholder@example.com
         </CNLink>
       </Stack>
-      <hr color="gray.100" />
+      <Separator opacity={0.2} />
       <Stack gap={4}>
         <Heading as={'h2'} fontSize="2xl" fontWeight="bold">
           Feel free to reach out to me via email:{' '}

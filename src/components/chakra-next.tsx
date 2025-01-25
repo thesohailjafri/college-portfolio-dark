@@ -17,7 +17,7 @@ export const CNLink = ({
   ...props
 }: CNLinkProps) => {
   return (
-    <ChakraLink color={'gray.500'} {...props} asChild>
+    <ChakraLink color={'gray.400'} {...props} asChild>
       <NextLink href={href} {...nextProps}>
         {children}
       </NextLink>
