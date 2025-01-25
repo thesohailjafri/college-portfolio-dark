@@ -1,41 +1,87 @@
-import { CNLink } from "@/components/chakra-next";
-import { MyContainer } from "@/components/ui/continers";
-import { projects } from "@/data/project.data";
-import { Heading, Separator, Stack, Text } from "@chakra-ui/react";
-import React from "react";
+import { CNLink } from '@/components/chakra-next'
+import { Flex, Heading, HStack, Separator, Stack, Text } from '@chakra-ui/react'
+import { FaGithub, FaLink } from 'react-icons/fa6'
 
 export default function index() {
   return (
-    <MyContainer marginBottom={10}>
-      <Stack gap={8}>
-        <Heading as="h1" fontSize="3xl" fontWeight="bold" mb={4}>
-          Projects
-        </Heading>
-        {projects.map((project, index) => {
-          return (
-           <>
-            <CNLink
-            key={index}
-            href={project.href}
-            _hover={{ textDecoration: "none" }}
-            target="_blank"
-          >
-            <Stack gap={4} alignItems="start">
-              <Heading as="h3" fontSize="xl" fontWeight="bold" textAlign="start">
-               {project.title}
-              </Heading>
-              <Text color="gray.500" lineHeight={1.5}>
-                {project.description}
+    <Stack gap={8}>
+      <Heading as="h1" fontSize="3xl" fontWeight="bold" mb={4}>
+        Projects🚀
+      </Heading>
+      {projectData.map((project, index) => {
+        return (
+          <Stack gap={4} alignItems="start" key={index}>
+            <Flex flexWrap={'wrap'} gapX={4} gapY={2}>
+              <Text textStyle={'cardHeading'} color={'white'}>
+                {project.title}
               </Text>
-            </Stack>
-          </CNLink>
-          <Separator opacity={0.2}/>
-           </>
-          )
-        } )}
-       
-
-      </Stack>
-    </MyContainer>
-  );
+              <HStack gap={4}>
+                <CNLink
+                  hidden={!project.previewUrl}
+                  href={project.previewUrl!}
+                  color={'white'}
+                >
+                  <FaLink size={'1.2rem'} />
+                </CNLink>
+                <CNLink
+                  hidden={!project.gitUrl}
+                  href={project.gitUrl!}
+                  color={'white'}
+                >
+                  <FaGithub size={'1.2rem'} />
+                </CNLink>
+              </HStack>
+            </Flex>
+            <Separator opacity={0.2} />
+            <Text lineHeight={1.5}>{project.description}</Text>
+          </Stack>
+        )
+      })}
+    </Stack>
+  )
 }
+
+export type Projects = {
+  title: string
+  description: string
+  previewUrl?: string
+  gitUrl?: string
+}
+
+export const projectData: Projects[] = [
+  {
+    title: 'Project Alpha',
+    description:
+      'A task management application designed to help users organize and prioritize their daily tasks effectively.',
+    previewUrl: '#',
+    gitUrl: '#',
+  },
+  {
+    title: 'Project Beta',
+    description:
+      'A real-time chat application with user authentication and custom chat rooms.',
+    previewUrl: '#',
+    gitUrl: '#',
+  },
+  {
+    title: 'Project Gamma',
+    description:
+      'An e-commerce platform for small businesses, featuring product catalogs, carts, and payment integration.',
+    previewUrl: '#',
+    gitUrl: '#',
+  },
+  {
+    title: 'Project Delta',
+    description:
+      'A portfolio website template for freelancers to showcase their skills and projects.',
+    previewUrl: '#',
+    gitUrl: '#',
+  },
+  {
+    title: 'Project Epsilon',
+    description:
+      'A weather forecast app that provides real-time weather updates and a 7-day forecast.',
+    previewUrl: '#',
+    gitUrl: '#',
+  },
+]

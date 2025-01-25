@@ -12,7 +12,6 @@ export const MyContainer = ({ children, ...props }: Props) => {
       px={{ base: 2, md: 4 }}
       maxW={{ md: '3xl' }}
       mx={'auto'}
-     
       {...props}
     >
       {children}

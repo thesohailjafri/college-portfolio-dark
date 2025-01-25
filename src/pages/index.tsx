@@ -1,40 +1,105 @@
-import { MyContainer } from "@/components/ui/continers";
-import { homepage } from "@/data/home.data";
-import { Heading, Separator, Stack, Text } from "@chakra-ui/react";
+import { CNLink } from '@/components/chakra-next'
+import { Box, Heading, Separator, Stack, Text } from '@chakra-ui/react'
+import { CiMail } from 'react-icons/ci'
+import { GoArrowUpRight } from 'react-icons/go'
 
 export default function Home() {
   return (
-    <>
-      {/* <Navbar /> */}
-
-      <MyContainer marginBottom={10}>
-        <Stack gap={8} separator={<Separator opacity={0.2} />}>
-          <Stack gap={2}>
-            <Heading as="h1" fontSize="3xl" fontWeight="bold" mb={4}>
-              Sup, I’m Sohail Jafri
+    <Stack gap={8} separator={<Separator opacity={0.2} />}>
+      <Stack gap={2}>
+        <Heading as="h1" fontSize="3xl" fontWeight="bold" mb={4}>
+          Sup, I’m Sohail Jafri
+        </Heading>
+        <Text lineHeight={1.5}>
+          I’m a Full Stack Web Developer from Mumbai, India, specializing in
+          building (and occasionally designing) exceptional digital solutions.
+        </Text>
+      </Stack>
+      {chunks.map((content, index) => {
+        return (
+          <Stack key={index}>
+            <Heading as="h2" fontSize="2xl" fontWeight="bold">
+              {content.title}
             </Heading>
-            <Text color={"gray.500"} lineHeight={1.5}>
-              {" "}
-              I’m a Full Stack Web Developer from Mohali, India, trying to make
-              the internet a bit cooler one website at a time.
-            </Text>
+            <Box lineHeight={1.5}>{content.content}</Box>
           </Stack>
-          {homepage.map((content, index) => {
-            return (
-              <Stack key={index}>
-                <Heading as="h2" fontSize="2xl" fontWeight="bold">
-                  {content.title}
-                </Heading>
-                <Text color={"gray.500"} lineHeight={1.5}>
-                  {content.content}
-                </Text>
-              </Stack>
-            );
-          })}
-        </Stack>
-      </MyContainer>
-
-      {/* <Footer /> */}
-    </>
-  );
+        )
+      })}
+    </Stack>
+  )
 }
+export const chunks = [
+  {
+    title: 'Professional Work',
+    content: (
+      <Stack gap={2}>
+        <Text>
+          I specialize in developing scalable and user-focused digital
+          solutions. Currently, I work as a Freelance Developer with various
+          clients, contributing to projects in web and mobile application
+          development, and optimizing performance for existing platforms.
+        </Text>
+        <Text>
+          One of my key projects involved creating a B2B platform that
+          streamlined operational workflows for a mid-sized business. For more
+          examples of my work, check out the Projects page.
+        </Text>
+      </Stack>
+    ),
+  },
+  {
+    title: 'Leadership & Community',
+    content: (
+      <Text>
+        I have experience leading teams in collaborative environments, focusing
+        on delivering impactful results. I’ve also contributed to workshops and
+        training sessions aimed at enhancing technical and organizational
+        skills. Additionally, I’ve played a role in organizing community events
+        that bring people together.
+      </Text>
+    ),
+  },
+  {
+    title: 'Personal Interests',
+    content: (
+      <Text>
+        Beyond work, I enjoy exploring topics in technology, reading about
+        personal development, and engaging in creative hobbies like music and
+        writing. I’m also passionate about learning new skills to expand my
+        horizons.
+      </Text>
+    ),
+  },
+  {
+    title: 'Writing',
+    content: (
+      <Stack gap={3}>
+        <Text>
+          I’ve started sharing my knowledge through blogs and articles to help
+          others improve their skills and stay updated with the latest industry
+          trends. Keep an eye out for more insights!
+        </Text>
+        <CNLink
+          width={'fit-content'}
+          _focus={{ outline: 'none', boxShadow: 'none' }}
+          display={'flex'}
+          href="https://x.com/thesohailjafri"
+          target="_blank"
+        >
+          <GoArrowUpRight />
+          Follow me
+        </CNLink>
+        <CNLink
+          width={'fit-content'}
+          _focus={{ outline: 'none', boxShadow: 'none' }}
+          display={'flex'}
+          href="mailto:placeholder@example.com"
+          target="_blank"
+        >
+          <CiMail />
+          placeholder@example.com
+        </CNLink>
+      </Stack>
+    ),
+  },
+]

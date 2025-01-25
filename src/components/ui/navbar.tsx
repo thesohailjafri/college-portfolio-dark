@@ -1,46 +1,47 @@
-import { siteMap } from "@/lib/config/default.config";
-import { Box } from "@chakra-ui/react";
-import { CNLink } from "../chakra-next";
-import { MyContainer } from "./continers";
+import { siteMap } from '@/lib/config/default.config'
+import { Flex } from '@chakra-ui/react'
+import { CNLink } from '../chakra-next'
+import { usePathname } from 'next/navigation'
+import path from 'path'
 
 export default function Navbar() {
+  const pathname = usePathname()
   return (
-    <Box p={{ md: 12 }} mt={{ base: 10, md: 0 }} mb={{ base: 8, md: 0 }}>
-      <MyContainer>
-        <Box display={"flex"} gap={{ base: 4 }} >
-          {navbar.map((element, index) => (
-            <CNLink key={index} href={element.path} 
-            _hover={{ textDecoration: "none" }} 
-            _focus={{ boxShadow: "none" }} 
-            >
-              {element.title}
-            </CNLink>
-          ))}
-        </Box>
-      </MyContainer>
-    </Box>
-  );
+    <Flex gap={4} flexWrap={'wrap'} py={{ base: 8, lg: 12 }}>
+      {items.map((element, index) => (
+        <CNLink
+          key={index}
+          href={element.path}
+          color={pathname === element.path ? 'gray.300' : 'gray.500'}
+          _hover={{ textDecoration: 'none' }}
+          _focus={{ boxShadow: 'none' }}
+        >
+          {element.title}
+        </CNLink>
+      ))}
+    </Flex>
+  )
 }
 
-const navbar = [
+const items = [
   {
-    title: "Home",
+    title: 'Home',
     path: siteMap.home,
   },
   {
-    title: "Projects",
+    title: 'Projects',
     path: siteMap.projects,
   },
   {
-    title: "Resume",
+    title: 'Resume',
     path: siteMap.resume,
   },
   {
-    title: "Contact",
+    title: 'Contact',
     path: siteMap.contact,
   },
   {
-    title: "Blog",
+    title: 'Blog',
     path: siteMap.blog,
   },
-];
+]
