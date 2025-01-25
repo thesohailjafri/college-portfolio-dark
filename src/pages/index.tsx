@@ -1,31 +1,41 @@
 import { CNLink } from '@/components/chakra-next'
+import Metahead from '@/components/metahead'
+import { siteMap } from '@/lib/config/default.config'
 import { Box, Heading, Separator, Stack, Text } from '@chakra-ui/react'
 import { CiMail } from 'react-icons/ci'
 import { GoArrowUpRight } from 'react-icons/go'
 
 export default function Home() {
   return (
-    <Stack gap={8} separator={<Separator opacity={0.2} />}>
-      <Stack gap={2}>
-        <Heading as="h1" fontSize="3xl" fontWeight="bold" mb={4}>
-          Sup, I’m Sohail Jafri
-        </Heading>
-        <Text lineHeight={1.5}>
-          I’m a Full Stack Web Developer from Mumbai, India, specializing in
-          building (and occasionally designing) exceptional digital solutions.
-        </Text>
+    <>
+      <Metahead
+        title="Home | College Portfolio"
+        description="This is a portfolio website built using Next.js and Chakra UI by ChakraFramer Team for college students to showcase their resume, projects, and contact information."
+        keywords={['Portfolio', 'Resume', 'ChakraFramer']}
+        url={siteMap.home}
+      />
+      <Stack gap={8} separator={<Separator opacity={0.2} />}>
+        <Stack gap={2}>
+          <Heading as="h1" fontSize="3xl" fontWeight="bold" mb={4}>
+            Sup, I’m Sohail Jafri
+          </Heading>
+          <Text lineHeight={1.5}>
+            I’m a Full Stack Web Developer from Mumbai, India, specializing in
+            building (and occasionally designing) exceptional digital solutions.
+          </Text>
+        </Stack>
+        {chunks.map((content, index) => {
+          return (
+            <Stack key={index}>
+              <Heading as="h2" fontSize="2xl" fontWeight="bold">
+                {content.title}
+              </Heading>
+              <Box lineHeight={1.5}>{content.content}</Box>
+            </Stack>
+          )
+        })}
       </Stack>
-      {chunks.map((content, index) => {
-        return (
-          <Stack key={index}>
-            <Heading as="h2" fontSize="2xl" fontWeight="bold">
-              {content.title}
-            </Heading>
-            <Box lineHeight={1.5}>{content.content}</Box>
-          </Stack>
-        )
-      })}
-    </Stack>
+    </>
   )
 }
 export const chunks = [
