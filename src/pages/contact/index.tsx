@@ -34,7 +34,7 @@ export default function Contact() {
         <Separator opacity={0.2} />
         <Stack gap={4}>
           <Heading as={'h2'} fontSize="2xl" fontWeight="bold">
-            Feel free to reach out to me via email:{' '}
+            Book a meeting
           </Heading>
           <CNLink
             width={'fit-content'}
