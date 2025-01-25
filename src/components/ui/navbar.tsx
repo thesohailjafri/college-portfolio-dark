@@ -1,8 +1,7 @@
 import { siteMap } from '@/lib/config/default.config'
 import { Flex } from '@chakra-ui/react'
-import { CNLink } from '../chakra-next'
 import { usePathname } from 'next/navigation'
-import path from 'path'
+import { CNLink } from '../chakra-next'
 
 export default function Navbar() {
   const pathname = usePathname()

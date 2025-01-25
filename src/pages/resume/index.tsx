@@ -25,7 +25,7 @@ export default function index() {
           borderColor={'gray.700'}
         >
           <CNLink
-            href="/Resume.pdf"
+            href="/resume.pdf"
             target="_blank"
             color={'white'}
             _focus={{ outline: 'none', boxShadow: 'none' }}

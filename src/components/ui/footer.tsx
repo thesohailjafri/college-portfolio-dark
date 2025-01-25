@@ -1,8 +1,7 @@
-import { Button, Center, Link } from '@chakra-ui/react'
+import { Button, Center } from '@chakra-ui/react'
 import { IconType } from 'react-icons'
 import { FaGithub, FaLinkedin, FaXTwitter } from 'react-icons/fa6'
 import { LuMailPlus } from 'react-icons/lu'
-import { MyContainer } from './continers'
 import { CNLink } from '../chakra-next'
 
 export default function Footer() {
